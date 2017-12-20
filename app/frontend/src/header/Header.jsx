@@ -2,8 +2,6 @@ import React from 'react'
 import logo from './logo.png'
 import NavButton from './NavButton'
 
-
-
 const style = {
   root: {
     backgroundColor: "#63C4FF",
