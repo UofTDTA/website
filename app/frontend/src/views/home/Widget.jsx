@@ -24,10 +24,10 @@ class Widget extends React.Component{
     return(
       <div style={Object.assign({width: this.props.width, height: this.props.height}, style.root)}>
         <div style={style.headerDiv}>
-          <h2 style={style.header}>Test</h2>
+          <h2 style={style.header}>{this.props.title || "Test"}</h2>
         </div>
         <div style={style.bodyDiv}>
-          <p>Lorem ipsum some dum dum num nom hum blum plum</p>
+          {this.props.bodyComponent}
         </div>
       </div>
     )

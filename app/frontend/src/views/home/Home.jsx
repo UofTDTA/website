@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from './logo.png'
 import Widget from './Widget'
+import { CryptoPricesWidget } from './widgets'
 
 const style = {
   root: {
@@ -27,6 +28,8 @@ const style = {
   }
 }
 
+const testComponent = <p>Hello, world!</p>
+
 class Home extends React.Component{
   render() {
     return (
@@ -38,9 +41,9 @@ class Home extends React.Component{
             <h1 style={style.nameHeader}>University of Toronto Decentralized Tech Association</h1>
           </div>
           <div style={style.dividingLine}></div>
-          <Widget height="600px" width="300px" />
-          <Widget height="600px" width="300px" />
-          <Widget height="600px" width="300px" />
+          <Widget height="600px" width="300px" title="Upcoming Events" bodyComponent={testComponent}/>
+          <Widget height="600px" width="300px" title="Cryptocurrencies" bodyComponent={<CryptoPricesWidget />}/>
+          <Widget height="600px" width="300px" bodyComponent={testComponent}/>
         </div>
 
         <div></div>
