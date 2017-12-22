@@ -11,6 +11,9 @@ const style = {
   root: {
     display: "grid",
     gridTemplateColumns: "1fr 3fr 1fr"
+  },
+  calendarDiv: {
+    paddingTop: "1rem"
   }
 }
 
@@ -19,7 +22,7 @@ class Calendar extends React.Component{
     return (
       <div style={style.root}>
         <div></div>
-        <div>
+        <div style={style.calendarDiv}>
           <BigCalendar
             style={{height: '420px'}}
             events={[]}
